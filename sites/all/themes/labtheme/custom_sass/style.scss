@@ -1,0 +1,247 @@
+//@import '../bootstrap_sass/bootstrap.scss';
+@import 'fonts.scss';
+@import 'variables.scss';
+
+body {
+  background: $footer-color;
+  font-size: 14px;
+  font-family: $body-font;
+  color: $body-color;
+}
+
+a {
+  color: $link-color;
+}
+
+h1, h2, h3, h4, strong {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: $h1-size;
+  color: $h1-color;
+  font-family: $h1-style;
+  line-height: $h1-height;
+  margin: $h1-margin;
+}
+
+h2 {
+  font-size: $h2-size;
+  color: $h2-color;
+  font-family: $h2-style;
+  line-height: $h2-height;
+  margin: $h2-margin;
+}
+
+h3 {
+  font-size: $h3-size;
+  color: $h3-color;
+  font-family: $h3-style;
+  line-height: $h3-height;
+  margin: $h3-margin;
+}
+
+header {
+  background: $header-color;
+  padding: $header-padding;
+  .logo img {
+    margin-top: 20px;
+  }
+  .block-search {
+    margin: $search-position;
+  }
+}
+
+.navbar-color {
+  background: $nav-color;
+  font-family: $navlink-font;
+}
+
+.navbar-nav > li > a {
+  color: $navlink-link;
+  font-size: $navlink-size;
+  padding: $navlink-padding;
+}
+
+.nav > li > a:hover,
+.nav > li > a.active,
+.nav > li.active-trail a.active-trail,
+.nav > li > a:focus {
+  background: $navlink-bkgrd-active;
+  color: $navlink-link-active;
+}
+
+.hero {
+  width: auto;
+  @include border(top, 3px, $header-color);
+  @include border(bottom, 3px, $header-color);
+  h1 {
+    font-size: $hero-size;
+    color: $hero-color;
+    font-family: $hero-style;
+    margin: $hero-position;
+  }
+  .hero-img {
+    height: $hero-img-ht;
+    background: $hero-img-img;
+    background-size: cover;
+  }
+}
+
+.submenu {
+  text-align: right;
+  font-size: $submenu-link-size;
+  font-family: $submenu-link-font;
+  //text-align: right;
+  .nav {
+    width: 80%;
+    float: right;
+    margin-top: 20px;
+    li {
+      a {
+        font-weight: normal;
+        color: $submenu-link-link;
+        display: inline-block;
+        padding: 3px 0 3px 18px;
+        margin-bottom: 26px;
+        //padding: 10px 0;
+      }
+      a:hover,
+      a:focus,
+      a.active-trail {
+        color: $submenu-link-link-active;
+        background: $submenu-link-bkgrd-active;
+      }
+      a.active-trail {
+      }
+    }
+  }
+}
+
+
+.main-container {
+  font-size: $body-size;
+}
+
+.content-area-color {
+  background: $content-area-color;
+}
+
+.main-container-margin {
+  margin: $main-container-margin;
+}
+
+.main-content-margin {
+  margin: $main-content-margin;
+}
+
+.page-content {
+  line-height: $body-height;
+}
+
+.home-news {
+  font-family: $reg-font;
+  padding: 30px 20px;
+  color: $white;
+  font-size: 0.88em;
+  h2, a {
+    color: $white;
+  }
+  h2 {
+    font-family: $lt-font;
+    font-size: 2.0em;
+    @include border('bottom', 1px, $white);
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  a {
+    text-decoration: underline;
+  }
+  /*
+  .views-field-title,
+  .views-field-field-date {
+    font-family: $bold-font;
+  }
+  .views-row {
+    margin-bottom: 20px;
+  }
+  */
+}
+
+.no-bullets {
+  list-style: none;
+  li {
+    margin-bottom: 15px;
+  }
+}
+
+.img-float {
+  float: left;
+  margin: 5px 20px 3px 0;
+}
+
+footer {
+  @include border(top, 5px, $footer-border-color);
+}
+
+.footer {
+  border-top: none;
+  margin-top:25px;
+}
+
+.footer-logos {
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-legal {
+  font-size: $footer-legal-size;
+  color: $footer-font-color;
+  p {
+    margin: 0;
+  }
+  a {
+    color: $footer-font-color;
+  }
+  ul {
+    padding-left: 0;
+    float: right;
+  }
+  li {
+    padding: 0 10px;
+    @include border(right, 1px, $footer-font-color);
+    @include menustyle;
+  }
+  li:first-child {
+   padding-left: 0;
+  }
+  li:last-child {
+      border: none;
+  }
+  .legal {
+    text-align: right;
+    font-size: 75%;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+}
+
