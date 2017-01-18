@@ -64,8 +64,8 @@
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://raw.githubusercontent.com/aFarkas/html5shiv/master/dist/html5shiv.min.js"></script>
+    <script src="https://raw.githubusercontent.com/scottjehl/Respond/master/dest/respond.min.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
 </head>
