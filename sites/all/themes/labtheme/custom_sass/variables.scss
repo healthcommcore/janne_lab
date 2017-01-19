@@ -15,13 +15,13 @@
 /* Variables */
 
 /* Generic colors */
-$dk-blue: #17334b;
+$dk-blue: #002C70;
 $med-blue: #477aa6;
-$lt-blue: #9bc7ed;
-$dk-gray: #404347;
+$lt-blue: #DEE6EB;
+$dk-gray: #505A71;
 $gray: #5C6470;
 $lt-gray: #ddd;
-$lt-bluegray: #c2ccd0;
+$lt-bluegray: #AAC2D8;
 $white: #fff;
 
 /* fonts */
@@ -31,13 +31,16 @@ $lt-font: 'OpenSansLight';
 $reg-font: 'OpenSansRegular';
 $semi-font: 'OpenSansSemibold';
 
-    
+/* Header */    
 $header-color: $dk-blue;
-$header-padding: 25px 0 30px;
+$header-padding: 5px 0 17px 0;
+$banner-container-lg: 1400px;
 
 $search-position: 20px 0 0 0;
-$content-area-color: $white;
+$content-area-color: $lt-blue;
 
+/* Hero */    
+$hero-container-lg: 2500px;
 $hero-position: 50px 0 0 30px;
 $hero-size: 3.0em;
 $hero-color: $white;
@@ -47,7 +50,8 @@ $hero-img-img: url('../images/hero_img2_reduced.jpg') 0 0 no-repeat;
 
 
 /* navbar */
-$nav-color: $med-blue;
+$nav-color: $dk-gray;
+$nav-border-color: $lt-bluegray;
 $navlink-bkgrd-active: $lt-blue;
 $navlink-link: $white;
 $navlink-link-active: $med-blue;
@@ -109,4 +113,17 @@ h1, h2, h3, h4, strong {
 strong {
   font-family: $semi-font;
 }
+
+////////////
+// MEDIUM //
+////////////
+
+////////////
+//. SMALL //
+////////////
+
+//////////////////
+//. EXTRA SMALL //
+//////////////////
+
 

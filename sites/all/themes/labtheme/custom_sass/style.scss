@@ -43,18 +43,30 @@ h3 {
 
 header {
   background: $header-color;
-  padding: $header-padding;
   .logo img {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .block-search {
     margin: $search-position;
   }
+  .banner-container {
+    width: $banner-container-lg;
+    background: url('../images/banner_circles.gif') 0 100% no-repeat;
+    padding: $header-padding;
+  }
+}
+
+.contain {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .navbar-color {
   background: $nav-color;
   font-family: $navlink-font;
+  @include border(top, 2px, $nav-border-color);
 }
 
 .navbar-nav > li > a {
@@ -71,20 +83,42 @@ header {
   color: $navlink-link-active;
 }
 
+.hero-container {
+  width: $hero-container-lg;
+  background: $lt-blue;
+  z-index: 0;
+}
+
+.hero-bkgrd-left {
+  background: url('../images/hero_bkgrd_left_1.jpg') 0 0 no-repeat;
+  width: 645px;
+  height: 458px;
+  float: left;
+}
+
+.hero-bkgrd-right {
+  background: url('../images/hero_bkgrd_right_1.jpg') 100% 0 no-repeat;
+  width: 643px;
+  height: 355px;
+}
+/*
+*/
+
 .hero {
+  position: relative;
   width: auto;
-  @include border(top, 3px, $header-color);
-  @include border(bottom, 3px, $header-color);
-  h1 {
-    font-size: $hero-size;
-    color: $hero-color;
-    font-family: $hero-style;
-    margin: $hero-position;
+  .hero-left {
+    @include border(left, 8px, $lt-blue);
+    @include border(right, 8px, $lt-blue);
   }
-  .hero-img {
-    height: $hero-img-ht;
-    background: $hero-img-img;
-    background-size: cover;
+  .hero-right {
+    @include border(right, 8px, $lt-blue);
+  }
+  .col-md-8 {
+    padding-right: 0;
+  }
+  .col-md-4 {
+    padding-left: 0;
   }
 }
 
@@ -226,6 +260,10 @@ footer {
       text-decoration: underline;
     }
   }
+}
+
+.absolute {
+  position: absolute;
 }
 
 .relative {

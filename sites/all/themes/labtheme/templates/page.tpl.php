@@ -81,25 +81,27 @@
 ?>
 
 <header role="banner" class="">
-  <div class="container">
-    <div class="header-logo row">
-      <?php if ($logo): ?>
-      <div class="<?php print $logo_width; ?>">
-          <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-          </a>
+  <div class="banner-container contain">
+    <div class="container">
+      <div class="header-logo row">
+        <?php if ($logo): ?>
+        <div class="col-sm-5">
+            <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+            </a>
+          </div>
+        <?php endif; ?>
+      <?php if (!empty($page['header_center'])): ?>
+        <div class="col-sm-3">
+          <?php print render($page['header_center']); ?>
         </div>
       <?php endif; ?>
-    <?php if (!empty($page['header_center'])): ?>
-      <div class="col-sm-3">
-        <?php print render($page['header_center']); ?>
+      <?php if (!empty($page['header_right'])): ?>
+        <div class="col-sm-3 col-sm-push-4">
+          <?php print render($page['header_right']); ?>
+        </div>
+      <?php endif; ?>
       </div>
-    <?php endif; ?>
-    <?php if (!empty($page['header_right'])): ?>
-      <div class="col-sm-3">
-        <?php print render($page['header_right']); ?>
-      </div>
-    <?php endif; ?>
     </div>
   </div>
 </header>
@@ -129,9 +131,30 @@
       </div>
     <?php endif; ?>
 
-<?php if (!empty($page['hero'])): ?>
+<?php if ($is_front) : ?>
+  <div id="hero-container" class="hero-container absolute visible-lg">
+    <div class="hero-bkgrd-left"></div>
+    <div id="hero-bkgrd-right" class="hero-bkgrd-right absolute hidden"></div>
+  </div>
   <div class="hero">
-    <?php print render($page['hero']); ?>
+    <div class="container">
+      <div class="row">
+        <?php if (!empty($page['hero_left'])): ?>
+          <div class="col-md-8">
+            <div id="hero-left" class="hero-left">
+              <?php print render($page['hero_left']); ?>
+            </div>
+          </div>
+        <?php endif; ?>
+        <?php if (!empty($page['hero_right'])): ?>
+          <div class="col-md-4">
+            <div id="hero-right" class="hero-right">
+              <?php print render($page['hero_right']); ?>
+            </div>
+          </div>
+        <?php endif; ?>
+      </div>
+    </div>
   </div>
 <?php endif; ?>
 <div class="main-container content-area-color">
@@ -199,4 +222,27 @@
 	<?php print render($page['footer']); ?>
   </div>
 </footer>
+
+<script>
+  var $ = jQuery;
+  $(window).load(function() {
+    var heroContainer = $("#hero-container");
+    var slideHeight = $("#hero-left")[0].scrollHeight;
+    var heroBkgrdRight = $("#hero-bkgrd-right");
+    var video = document.getElementById("hero-right")
+    var position = getVideoPosition(video);
+    heroContainer.height(slideHeight + "px");
+    heroBkgrdRight.css("left", position.right + "px").removeClass("hidden");
+
+    $(window).resize(function () {
+      var position = getVideoPosition(video);
+      heroBkgrdRight.css("left", position.right + "px");
+    });
+
+    function getVideoPosition (video) {
+      return video.getBoundingClientRect();
+    }
+
+  });
+</script>
 

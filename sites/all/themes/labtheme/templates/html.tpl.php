@@ -102,6 +102,5 @@
 	}
 })(jQuery);
 </script>
-
 </body>
 </html>
