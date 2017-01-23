@@ -66,13 +66,19 @@ header {
 .navbar-color {
   background: $nav-color;
   font-family: $navlink-font;
+  font-weight: $navlink-font-wt;
   @include border(top, 2px, $nav-border-color);
+}
+
+.navbar-nav {
+  margin-top: -2px;
 }
 
 .navbar-nav > li > a {
   color: $navlink-link;
   font-size: $navlink-size;
   padding: $navlink-padding;
+  @include border(top, 2px, $nav-border-color);
 }
 
 .nav > li > a:hover,
@@ -81,12 +87,18 @@ header {
 .nav > li > a:focus {
   background: $navlink-bkgrd-active;
   color: $navlink-link-active;
+  @include border(top, 2px, $black);
+}
+
+.nav > li > a.active,
+.nav > li.active-trail a.active-trail {
+  font-weight: $med-weight;
 }
 
 .hero-container {
   width: $hero-container-lg;
-  background: $lt-blue;
   z-index: 0;
+  overflow: hidden;
 }
 
 .hero-bkgrd-left {
@@ -107,12 +119,22 @@ header {
 .hero {
   position: relative;
   width: auto;
+  margin-bottom: 80px;
   .hero-left {
     @include border(left, 8px, $lt-blue);
     @include border(right, 8px, $lt-blue);
   }
   .hero-right {
     @include border(right, 8px, $lt-blue);
+    .video-statement {
+      color: $med-blue;
+      font-size: 2.8em;
+      @include border(left, 1px, $med-blue);
+      margin: 40px 20px 0 30px;
+      padding: 5px 20px 5px 25px ;
+      line-height: 1.1;
+    }
+      
   }
   .col-md-8 {
     padding-right: 0;
@@ -152,13 +174,15 @@ header {
   }
 }
 
+.content-gradient {
+  background: $content-area-color;
+}
 
 .main-container {
   font-size: $body-size;
 }
 
 .content-area-color {
-  background: $content-area-color;
 }
 
 .main-container-margin {
@@ -173,8 +197,38 @@ header {
   line-height: $body-height;
 }
 
+.research-themes-header {
+  margin-bottom: 0;
+}
+
+.home-research-themes {
+  width: 90%;
+  margin: 0 auto;
+  @include border(bottom, 1px, $dk-blue);
+}
+
+.research-theme {
+  display: block;
+  margin: 50px 0 20px 0;
+  .research-theme-img {
+    float: left;
+    margin-right: 20px;
+  }
+  .research-theme-text {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+    @include border(left, 1px, $dk-blue);
+    font-family: $skolar-con;
+    font-weight: $lt-weight;
+    line-height: 1.2;
+    font-size: 2.3em;
+    height: 160px;
+    color: $dk-blue;
+  }
+}
+
 .home-news {
-  font-family: $reg-font;
   padding: 30px 20px;
   color: $white;
   font-size: 0.88em;
@@ -182,7 +236,7 @@ header {
     color: $white;
   }
   h2 {
-    font-family: $lt-font;
+    font-family: $h2-style;
     font-size: 2.0em;
     @include border('bottom', 1px, $white);
     display: inline-block;
@@ -270,6 +324,35 @@ footer {
   position: relative;
 }
 
+@media (min-width: 1700px) {
+  .col-xl-3 {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width:1399px){
+  header {
+    .banner-container {
+      width: 1200px;
+    }
+    .logo {
+      margin-left: 100px;
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 2200px) {
+  .research-theme {
+    .research-theme-img {
+      width: 107px;
+    }
+    .research-theme-text {
+      font-size: 1.7em;
+      height: 120px;
+      padding-right: 30px;
+    }
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
 }

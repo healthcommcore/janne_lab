@@ -61,6 +61,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+  <script src="https://use.typekit.net/pyp7hzm.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>

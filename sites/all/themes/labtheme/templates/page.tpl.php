@@ -85,7 +85,7 @@
     <div class="container">
       <div class="header-logo row">
         <?php if ($logo): ?>
-        <div class="col-sm-5">
+        <div class="col-sm-6">
             <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
               <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
             </a>
@@ -97,7 +97,7 @@
         </div>
       <?php endif; ?>
       <?php if (!empty($page['header_right'])): ?>
-        <div class="col-sm-3 col-sm-push-4">
+        <div class="col-sm-4 col-sm-push-2">
           <?php print render($page['header_right']); ?>
         </div>
       <?php endif; ?>
@@ -131,77 +131,93 @@
       </div>
     <?php endif; ?>
 
-<?php if ($is_front) : ?>
-  <div id="hero-container" class="hero-container absolute visible-lg">
-    <div class="hero-bkgrd-left"></div>
-    <div id="hero-bkgrd-right" class="hero-bkgrd-right absolute hidden"></div>
-  </div>
-  <div class="hero">
-    <div class="container">
-      <div class="row">
-        <?php if (!empty($page['hero_left'])): ?>
-          <div class="col-md-8">
-            <div id="hero-left" class="hero-left">
-              <?php print render($page['hero_left']); ?>
-            </div>
-          </div>
-        <?php endif; ?>
-        <?php if (!empty($page['hero_right'])): ?>
-          <div class="col-md-4">
-            <div id="hero-right" class="hero-right">
-              <?php print render($page['hero_right']); ?>
-            </div>
-          </div>
-        <?php endif; ?>
-      </div>
+<div class="content-gradient">
+  <?php if ($is_front) : ?>
+    <div id="hero-container" class="hero-container absolute visible-lg">
+      <div class="hero-bkgrd-left"></div>
+      <div id="hero-bkgrd-right" class="hero-bkgrd-right absolute hidden"></div>
     </div>
-  </div>
-<?php endif; ?>
-<div class="main-container content-area-color">
-  <div class="container">
-    <div class="row">
-    <div class="main-container-margin">
-    <?php if (!empty($page['left_column'])): ?>
-      <aside class="col-sm-3 hidden-xs" role="complementary">
-        <?php print render($page['left_column']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
-
-    <section<?php print $content_column_class; ?>>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-      <a id="main-content"></a>
-      <div class="main-content-margin">
-        <?php print render($title_prefix); ?>
-        <?php if (!empty($title) && !$is_front) : ?>
-          <h1><?php print $title; ?></h1>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php print $messages; ?>
-        <?php if (!empty($tabs)): ?>
-          <?php print render($tabs); ?>
-        <?php endif; ?>
-        <?php if (!empty($page['help'])): ?>
-          <?php print render($page['help']); ?>
-        <?php endif; ?>
-        <?php if (!empty($action_links)): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-        <div class="page-content">
-          <?php print render($page['content']); ?>
+    <div class="hero">
+      <div class="container">
+        <div class="row">
+          <?php if (!empty($page['hero_left'])): ?>
+            <div class="col-md-8">
+              <div id="hero-left" class="hero-left">
+                <?php print render($page['hero_left']); ?>
+              </div>
+            </div>
+          <?php endif; ?>
+          <?php if (!empty($page['hero_right'])): ?>
+            <div class="col-md-4">
+              <div id="hero-right" class="hero-right">
+                <?php print render($page['hero_right']); ?>
+              </div>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
-    </section>
-
-    <?php if (!empty($page['right_column'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['right_column']); ?>
-      </aside>  <!-- /#sidebar-second -->
+    </div>
+    <?php if (!empty($page['home_research_theme'])): ?>
+      <div class="container">
+        <h1 class="research-themes-header">Main research themes</h1>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="home-research-themes">
+            <?php print render($page['home_research_theme']); ?>
+          </div>
+        </div>
+      </div>
     <?php endif; ?>
 
-      </div><!-- /main-container-margin -->
-    </div><!-- /row -->
-  </div><!-- /container -->
-</div><!-- /main-container -->
+  <?php endif; ?>
+
+  <div class="main-container content-area-color">
+    <div class="container">
+      <div class="row">
+      <div class="main-container-margin">
+      <?php if (!empty($page['left_column'])): ?>
+        <aside class="col-sm-3 hidden-xs" role="complementary">
+          <?php print render($page['left_column']); ?>
+        </aside>  <!-- /#sidebar-first -->
+      <?php endif; ?>
+
+      <section<?php print $content_column_class; ?>>
+        <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+        <a id="main-content"></a>
+        <div class="main-content-margin">
+          <?php print render($title_prefix); ?>
+          <?php if (!empty($title) && !$is_front) : ?>
+            <h1><?php print $title; ?></h1>
+          <?php endif; ?>
+          <?php print render($title_suffix); ?>
+          <?php print $messages; ?>
+          <?php if (!empty($tabs)): ?>
+            <?php print render($tabs); ?>
+          <?php endif; ?>
+          <?php if (!empty($page['help'])): ?>
+            <?php print render($page['help']); ?>
+          <?php endif; ?>
+          <?php if (!empty($action_links)): ?>
+            <ul class="action-links"><?php print render($action_links); ?></ul>
+          <?php endif; ?>
+          <div class="page-content">
+            <?php print render($page['content']); ?>
+          </div>
+        </div>
+      </section>
+
+      <?php if (!empty($page['right_column'])): ?>
+        <aside class="col-sm-3" role="complementary">
+          <?php print render($page['right_column']); ?>
+        </aside>  <!-- /#sidebar-second -->
+      <?php endif; ?>
+
+        </div><!-- /main-container-margin -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div><!-- /main-container -->
+</div><!-- /content gradient -->
 
 <footer>
 <div class="footer container">
