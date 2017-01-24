@@ -23,6 +23,8 @@ $lt-gray: #ddd;
 $dk-gray: #464A5F;
 $lt-bluegray: #AAC2D8;
 $white: #fff;
+$burgundy: #A90533;
+$dk-burgundy: #770025;
 $black: #000;
 
 /* fonts */
@@ -70,17 +72,18 @@ $navlink-font-wt: $lt-weight;
 
 /* submenu */
 $submenu-color: $white;
-$submenu-link-bkgrd-active: $lt-gray;
-$submenu-link-link: $med-blue;
+$submenu-link-bkgrd-active: $gray;
+$submenu-link-link: $white;
 $submenu-link-link-active: $dk-blue;
 $submenu-link-padding: 15px 15px 15px 15px;
-$submenu-link-size: 1.2em;
+$submenu-link-size: 1.3em;
 $submenu-link-font: $roboto;
 
 
 /* Main content */
 $body-color: $dk-gray;
-$body-size: 1.3em;
+$body-size: 1.6em;
+$body-weight: $exlt-weight;
 $body-height: 1.5em;
 $link-color: $med-blue;
 
@@ -89,10 +92,10 @@ $main-container-margin: 40px 0 0 0;
 $main-content-margin: 0 60px 80px 30px;
 
 
-$h1-size: 3.0em;
+$h1-size: 2.3em;
 $h1-color: $med-blue;
 $h1-style: $more;
-$h1-height: 1.2em;;
+$h1-height: 1.1em;;
 $h1-margin: 20px 0;
 
 $h2-size: 1.35em;
@@ -109,7 +112,7 @@ $h3-margin: 20px 0 3px 0;
 
 
 $footer-color: $gray;
-$footer-border-color: $lt-bluegray;
+$footer-border-color: $dk-blue;
 
 
 $footer-legal-size: 1.1em;

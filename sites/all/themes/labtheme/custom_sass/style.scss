@@ -23,6 +23,7 @@ h1 {
   font-family: $h1-style;
   line-height: $h1-height;
   margin: $h1-margin;
+  letter-spacing: -0.01em;
 }
 
 h2 {
@@ -56,6 +57,21 @@ header {
   }
 }
 
+.header-logos-container {
+  margin-top: 15px;
+  .header-logos {
+    float: right;
+    a:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+.search-container {
+  .form-group {
+    margin-bottom: 0;
+  }
+}
 .contain {
   padding-right: 15px;
   padding-left: 15px;
@@ -72,6 +88,30 @@ header {
 
 .navbar-nav {
   margin-top: -2px;
+  li.expanded:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu {
+    background: $navlink-bkgrd-active;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    li {
+    }
+    li > a {
+      padding-top: 6px;
+      padding-bottom: 7px;
+      font-family: $submenu-link-font;
+      color: $submenu-link-link;
+      font-weight: $navlink-font-wt;
+      font-size: $submenu-link-size;
+      line-height: 1.3;
+    }
+    li.active > a,
+    li > a:hover,
+    li > a:focus {
+      background: $submenu-link-bkgrd-active;
+    }
+  }
 }
 
 .navbar-nav > li > a {
@@ -79,6 +119,17 @@ header {
   font-size: $navlink-size;
   padding: $navlink-padding;
   @include border(top, 2px, $nav-border-color);
+}
+
+.navbar-nav > li.last > a {
+  background: $burgundy;
+}
+
+.nav > li.last > a:hover,
+.nav > li.last > a.active,
+.nav > li.last.active-trail a.active-trail,
+.nav > li.last > a:focus {
+  background: $dk-burgundy;
 }
 
 .nav > li > a:hover,
@@ -99,6 +150,10 @@ header {
   width: $hero-container-lg;
   z-index: 0;
   overflow: hidden;
+}
+
+.hero-border {
+  @include border(bottom, 14px, $dk-blue);
 }
 
 .hero-bkgrd-left {
@@ -126,6 +181,9 @@ header {
   }
   .hero-right {
     @include border(right, 8px, $lt-blue);
+    .embed-responsive-4by3 {
+      padding-bottom: 76%;
+    }
     .video-statement {
       color: $med-blue;
       font-size: 2.8em;
@@ -180,6 +238,7 @@ header {
 
 .main-container {
   font-size: $body-size;
+  font-weight: $body-weight;
 }
 
 .content-area-color {
@@ -199,6 +258,7 @@ header {
 
 .research-themes-header {
   margin-bottom: 0;
+  font-size: 3.5em;
 }
 
 .home-research-themes {
@@ -269,17 +329,24 @@ header {
 }
 
 footer {
-  @include border(top, 5px, $footer-border-color);
+  @include border(top, 12px, $footer-border-color);
 }
 
 .footer {
   border-top: none;
-  margin-top:25px;
+  margin-top:35px;
+  padding-top: 0;
+  padding-bottom: 80px;
 }
 
 .footer-logos {
   p {
     margin-bottom: 20px;
+    margin-right: 80px;
+  }
+  a {
+    margin-top: 20px;
+    margin-right: 40px;
   }
 }
 
