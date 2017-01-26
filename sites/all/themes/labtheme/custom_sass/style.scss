@@ -24,6 +24,7 @@ h1 {
   line-height: $h1-height;
   margin: $h1-margin;
   letter-spacing: -0.01em;
+  @include border(bottom, 1px, $med-blue);
 }
 
 h2 {
@@ -108,8 +109,10 @@ header {
     }
     li.active > a,
     li > a:hover,
+    li.active-trail > a.active-trail,
     li > a:focus {
       background: $submenu-link-bkgrd-active;
+      border: none;
     }
   }
 }
@@ -288,6 +291,22 @@ header {
   }
 }
 
+.content-research-themes {
+  .research-theme {
+    .research-theme-img {
+      width: 146px;
+      margin-top: 7px;
+      margin-bottom: 7px;
+    }
+    .research-theme-text {
+      font-size: 1.2em;
+      line-height: 1.1;
+      height: 160px;
+    }
+  }
+}
+
+
 .home-news {
   padding: 30px 20px;
   color: $white;
@@ -389,6 +408,19 @@ footer {
 
 .relative {
   position: relative;
+}
+
+.people-row {
+  margin-bottom: 40px;
+}
+
+.people-img {
+  float: left;
+  margin: 5px 20px 5px 0;
+}
+
+.img-margins {
+  margin: 40px 0;
 }
 
 @media (min-width: 1700px) {
