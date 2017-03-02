@@ -52,7 +52,8 @@ h2 {
   font-family: $h2-style;
   line-height: $h2-height;
   margin: $h2-margin;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-variant: small-caps;
 }
 
 h3 {
@@ -221,6 +222,7 @@ header {
       margin: 40px 0 0 20px;
       padding: 5px 10px 25px 25px ;
       line-height: 1.2;
+      letter-spacing: -0.04em;
     }
       
   }
@@ -316,6 +318,9 @@ header {
     font-size: 2.3em;
     height: 160px;
     color: $dk-blue;
+    a {
+      font-weight: $reg-weight;
+    }
   }
 }
 
@@ -349,6 +354,14 @@ header {
   }
 }
 
+.content-img.content-img-variation {
+  @include border(bottom, 12px, $green);
+  p {
+    font-size: 1.3em;
+    font-family: $more;
+  }
+}
+
 .half-size {
   width: 50%;
 }
@@ -369,6 +382,21 @@ header {
   img {
     padding: 10px 0 40px;
   }
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: $rust;
+  border: none;
+}
+
+.btn-lg {
+  font-size: 1.4em;
+  padding-top: 4px; 
+  padding-bottom: 15px; 
 }
 
 .oncopanel {
