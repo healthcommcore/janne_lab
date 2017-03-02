@@ -135,7 +135,9 @@
   <?php if ($is_front) : ?>
     <div id="hero-container" class="hero-container absolute visible-lg">
       <div class="hero-bkgrd-left hero-border"></div>
-      <div id="hero-bkgrd-right" class="hero-bkgrd-right absolute hidden hero-border"></div>
+      <div id="hero-bkgrd-right" class="hero-bkgrd-right absolute hidden border-left hero-bkgrd-right-dims">
+        <div class="hero-border hero-bkgrd-right-dims"></div>
+      </div>
     </div>
     <div class="hero">
       <div class="container">
@@ -174,6 +176,14 @@
 
   <div class="main-container content-area-color">
     <div class="container">
+      <?php if (!empty($page['title_header'])): ?>
+        <div class="title-header">
+          <?php print render($page['title_header']); ?>
+        </div>
+        <?php if (!empty($title) && !$is_front) : ?>
+          <h1 class="landing"><?php print $title; ?></h1>
+        <?php endif; ?>
+      <?php endif; ?>
       <div class="row">
       <div class="main-container-margin">
       <?php if (!empty($page['left_column'])): ?>
@@ -187,7 +197,7 @@
         <a id="main-content"></a>
         <div class="main-content-margin">
           <?php print render($title_prefix); ?>
-          <?php if (!empty($title) && !$is_front) : ?>
+          <?php if (!empty($title) && !$is_front && empty($page['title_header'])) : ?>
             <h1><?php print $title; ?></h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>

@@ -19,6 +19,8 @@ $dk-blue: #002C70;
 $med-blue: #003B7B;
 $lt-blue: #DEE6EB;
 $gray: #5C6470;
+$green: #3B6A00;
+$rust: #AA3828;
 $lt-gray: #ddd;
 $dk-gray: #464A5F;
 $lt-bluegray: #AAC2D8;
@@ -26,6 +28,7 @@ $white: #fff;
 $burgundy: #A90533;
 $dk-burgundy: #770025;
 $black: #000;
+$hero-bkgrd-border-color: #F2F5F7;
 
 /* fonts */
 $skolar: 'skolar-sans-latin';
@@ -47,7 +50,7 @@ $header-padding: 5px 0 17px 0;
 $banner-container-lg: 1400px;
 
 $search-position: 20px 0 0 0;
-$content-area-color: $lt-blue;
+$content-area-color: $lt-blue radial-gradient(circle, #fff, $lt-blue);
 
 /* Hero */    
 $hero-container-lg: 100%;
@@ -81,15 +84,15 @@ $submenu-link-font: $roboto;
 
 
 /* Main content */
-$body-color: $dk-gray;
+$body-color: $black;
 $body-size: 1.6em;
 $body-weight: $exlt-weight;
 $body-height: 1.5em;
-$link-color: $med-blue;
+$link-color: $rust;
 
 
 $main-container-margin: 60px 0 0 0;
-$main-content-margin: 0 60px 80px 30px;
+$main-content-margin: 0 60px 80px 83px;
 
 
 $h1-size: 2.3em;
@@ -98,8 +101,8 @@ $h1-style: $more;
 $h1-height: 1.1em;;
 $h1-margin: 20px 0;
 
-$h2-size: 1.35em;
-$h2-color: $med-blue;
+$h2-size: 1.1em;
+$h2-color: $green;
 $h2-style: $more;
 $h2-height: 1.3;
 $h2-margin: 20px 0 0 0;
@@ -122,8 +125,8 @@ h1, h2, h3, h4, strong {
   font-weight: normal;
 }
 
-strong {
-  font-weight: $reg-weight;
+a, strong {
+  font-weight: $bold-weight;
 }
 
 ////////////

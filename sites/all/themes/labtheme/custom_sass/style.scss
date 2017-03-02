@@ -9,11 +9,16 @@ body {
   color: $body-color;
 }
 
-a {
-  color: $link-color;
+p {
+  margin: 0 0 25px 0;
 }
 
-h1, h2, h3, h4, strong {
+a {
+  color: $link-color;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
   font-weight: normal;
 }
 
@@ -27,12 +32,27 @@ h1 {
   @include border(bottom, 1px, $med-blue);
 }
 
+h1.landing {
+  border: none;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: -82px;
+  padding: 15px 0 10px 80px;
+  width: 1140px;
+}
+
+.title-header {
+  overflow: hidden;
+  display: block;
+}
+
 h2 {
   font-size: $h2-size;
   color: $h2-color;
   font-family: $h2-style;
   line-height: $h2-height;
   margin: $h2-margin;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -106,6 +126,7 @@ header {
       font-weight: $navlink-font-wt;
       font-size: $submenu-link-size;
       line-height: 1.3;
+      text-decoration: none;
     }
     li.active > a,
     li > a:hover,
@@ -118,6 +139,8 @@ header {
 }
 
 .navbar-nav > li > a {
+  font-weight: $book-weight;
+  text-decoration: none;
   color: $navlink-link;
   font-size: $navlink-size;
   padding: $navlink-padding;
@@ -167,7 +190,11 @@ header {
 }
 
 .hero-bkgrd-right {
+  @include border(left, 8px, $hero-bkgrd-border-color);
   background: url('../images/hero_bkgrd_right_1.jpg') 100% 0 no-repeat;
+}
+
+.hero-bkgrd-right-dims {
   width: 643px;
   height: 355px;
 }
@@ -179,21 +206,21 @@ header {
   width: auto;
   margin-bottom: 80px;
   .hero-left {
-    @include border(left, 8px, $lt-blue);
-    @include border(right, 8px, $lt-blue);
+    @include border(left, 8px, $hero-bkgrd-border-color);
+    @include border(right, 8px, $hero-bkgrd-border-color);
   }
   .hero-right {
-    @include border(right, 8px, $lt-blue);
     .embed-responsive-4by3 {
       padding-bottom: 76%;
     }
     .video-statement {
-      color: $med-blue;
-      font-size: 2.8em;
-      @include border(left, 1px, $med-blue);
-      margin: 40px 20px 0 30px;
-      padding: 5px 20px 5px 25px ;
-      line-height: 1.1;
+      color: $burgundy;
+      font-size: 3.4em;
+      font-weight: $lt-weight;
+      @include border(left, 2px, $burgundy);
+      margin: 40px 0 0 20px;
+      padding: 5px 10px 25px 25px ;
+      line-height: 1.2;
     }
       
   }
@@ -262,6 +289,7 @@ header {
 .research-themes-header {
   margin-bottom: 0;
   font-size: 3.5em;
+  border-bottom: none;
 }
 
 .home-research-themes {
@@ -306,6 +334,46 @@ header {
   }
 }
 
+.content-img {
+  background: $white;
+  @include border(top, 12px, $green);
+  img {
+    margin: 25px auto 35px;
+  }
+  p {
+    background: $green;
+    color: $white;
+    padding: 8px 30px 15px 30px;
+    font-size: 0.8em;
+    line-height: 1.35;
+  }
+}
+
+.half-size {
+  width: 50%;
+}
+
+.pull-left.img-margin {
+  margin: 12px 25px 5px 0;
+}
+
+.pull-right.img-margin {
+  margin: 10px 0 5px 20px;
+}
+
+.img-margin {
+  margin: 20px 0;
+}
+
+.bottom-padding {
+  img {
+    padding: 10px 0 40px;
+  }
+}
+
+.oncopanel {
+  margin-top: 50px;
+}
 
 .home-news {
   padding: 30px 20px;
@@ -421,6 +489,11 @@ footer {
 
 .img-margins {
   margin: 40px 0;
+}
+
+.bottom-margin {
+  margin-bottom: 20px;
+  display: inline-block;
 }
 
 @media (min-width: 1700px) {
