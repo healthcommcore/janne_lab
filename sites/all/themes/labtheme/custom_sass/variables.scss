@@ -91,11 +91,11 @@ $body-height: 1.5em;
 $link-color: $rust;
 
 
-$main-container-margin: 60px 0 0 0;
-$main-content-margin: 0 60px 80px 83px;
+$main-container-margin-lg: 60px 0 0 0;
+$main-content-margin-lg: 0 60px 80px 83px;
 
 
-$h1-size: 2.3em;
+$h1-size-lg: 2.3em;
 $h1-color: $med-blue;
 $h1-style: $more;
 $h1-height: 1.1em;;
@@ -133,6 +133,10 @@ a, strong {
 ////////////
 // MEDIUM //
 ////////////
+$banner-container-md: 990px;
+$main-container-margin-md: 50px 0 0 0;
+$main-content-margin-md: 0 50px 80px 53px;
+$h1-size-md: 2.1em;
 
 ////////////
 //. SMALL //

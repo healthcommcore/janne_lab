@@ -23,7 +23,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: $h1-size;
+  font-size: $h1-size-lg;
   color: $h1-color;
   font-family: $h1-style;
   line-height: $h1-height;
@@ -281,11 +281,11 @@ header {
 }
 
 .main-container-margin {
-  margin: $main-container-margin;
+  margin: $main-container-margin-lg;
 }
 
 .main-content-margin {
-  margin: $main-content-margin;
+  margin: $main-content-margin-lg;
 }
 
 .page-content {
@@ -559,6 +559,62 @@ footer {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  header {
+    .banner-container {
+      width: $banner-container-md;
+    }
+  }
+  .hero {
+    margin-bottom: 60px;
+    .hero-right {
+      .video-statement {
+        font-size: 2.9em;
+      }
+    }
+  }
+  .research-themes-header {
+    font-size: 3.2em;
+  }
+  .home-research-themes {
+     width: 95%;
+  }
+  .research-theme {
+    .research-theme-text {
+      font-size: 2.0em;
+    }
+  }
+  h1 {
+    font-size: $h1-size-md;
+  }
+
+  h1.landing {
+    width: 940px;
+    margin-top: -76px;
+    padding-left: 50px;
+  }
+
+  .main-container-margin {
+    margin: $main-container-margin-md;
+  }
+  .main-content-margin {
+     margin: $main-content-margin-md;
+  }
+
+  .content-img {
+    img {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .footer-logos {
+    p {
+      margin-right: 50px;
+    }
+    a {
+      margin-right: 20px;
+    }
+  }
 }
 
 @media (max-width: 991px) {
