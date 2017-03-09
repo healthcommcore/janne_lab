@@ -87,7 +87,7 @@
         <?php if ($logo): ?>
         <div class="col-sm-6">
             <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+              <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
             </a>
           </div>
         <?php endif; ?>
@@ -97,7 +97,7 @@
         </div>
       <?php endif; ?>
       <?php if (!empty($page['header_right'])): ?>
-        <div class="col-sm-5 col-sm-push-1">
+        <div class="col-md-5 col-md-push-1 col-sm-6">
           <?php print render($page['header_right']); ?>
         </div>
       <?php endif; ?>
@@ -143,14 +143,14 @@
       <div class="container">
         <div class="row">
           <?php if (!empty($page['hero_left'])): ?>
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-8">
               <div id="hero-left" class="hero-left">
                 <?php print render($page['hero_left']); ?>
               </div>
             </div>
           <?php endif; ?>
           <?php if (!empty($page['hero_right'])): ?>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-4">
               <div id="hero-right" class="hero-right">
                 <?php print render($page['hero_right']); ?>
               </div>
@@ -231,32 +231,32 @@
 
 <footer>
 <div class="footer container">
-	<?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
-		<div class="row">
-			<?php if (!empty($page['footer_logos'])): ?>
-				<div class="col-md-8 footer-logos">
-					<?php print render($page['footer_logos']); ?>
-				</div>
-			<?php endif; ?>
-			<?php if (!empty($page['footer_legal'])): ?>
-				<div class="col-md-4 footer-legal">
-					<?php print render($page['footer_legal']); ?>
-				</div>
-			<?php endif; ?>
-		</div>
-	<?php endif; ?>
-	<?php print render($page['footer']); ?>
+  <?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
+    <div class="row">
+      <?php if (!empty($page['footer_logos'])): ?>
+        <div class="col-md-8 footer-logos">
+          <?php print render($page['footer_logos']); ?>
+        </div>
+      <?php endif; ?>
+      <?php if (!empty($page['footer_legal'])): ?>
+        <div class="col-md-4 footer-legal">
+          <?php print render($page['footer_legal']); ?>
+        </div>
+      <?php endif; ?>
+    </div>
+  <?php endif; ?>
+  <?php print render($page['footer']); ?>
   </div>
 </footer>
 
-<script>
+  <script>
   var $ = jQuery;
   $(window).load(function() {
     var heroContainer = $("#hero-container");
     var slideHeight = $("#hero-left")[0].scrollHeight;
     var heroBkgrdRight = $("#hero-bkgrd-right");
     var video = document.getElementById("hero-right")
-    var position = getVideoPosition(video);
+      var position = getVideoPosition(video);
     heroContainer.height(slideHeight + "px");
     heroBkgrdRight.css("left", position.right + "px").removeClass("hidden");
 
@@ -267,8 +267,7 @@
 
     function getVideoPosition (video) {
       return video.getBoundingClientRect();
-    }
-
+    } 
   });
 </script>
 
