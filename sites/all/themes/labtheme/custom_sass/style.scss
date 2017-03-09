@@ -71,6 +71,10 @@ header {
   }
   .block-search {
     margin: $search-position;
+    .btn-primary {
+      background: $dk-gray;
+      border: $dk-gray 1px solid;
+    }
   }
   .banner-container {
     width: $banner-container-lg;
