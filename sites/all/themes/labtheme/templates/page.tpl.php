@@ -86,7 +86,7 @@
       <div class="header-logo row">
         <?php if ($logo): ?>
         <div class="col-sm-6">
-            <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
               <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
             </a>
           </div>
@@ -142,17 +142,17 @@
     <div class="hero">
       <div class="container">
         <div class="row">
-          <?php if (!empty($page['hero_left'])): ?>
-            <div class="col-md-8 col-sm-8">
-              <div id="hero-left" class="hero-left">
-                <?php print render($page['hero_left']); ?>
+          <?php if (!empty($page['hero_right'])): ?>
+            <div class="col-md-4 col-md-push-8 col-sm-4 col-sm-push-8">
+              <div id="right-side" class="hero-right">
+                <?php print render($page['hero_right']); ?>
               </div>
             </div>
           <?php endif; ?>
-          <?php if (!empty($page['hero_right'])): ?>
-            <div class="col-md-4 col-sm-4">
-              <div id="hero-right" class="hero-right">
-                <?php print render($page['hero_right']); ?>
+          <?php if (!empty($page['hero_left'])): ?>
+            <div class="col-md-8 col-md-pull-4 col-sm-8 col-sm-pull-4">
+              <div id="left-side" class="hero-left">
+                <?php print render($page['hero_left']); ?>
               </div>
             </div>
           <?php endif; ?>
@@ -253,9 +253,9 @@
   var $ = jQuery;
   $(window).load(function() {
     var heroContainer = $("#hero-container");
-    var slideHeight = $("#hero-left")[0].scrollHeight;
+    var slideHeight = $("#left-side")[0].scrollHeight;
     var heroBkgrdRight = $("#hero-bkgrd-right");
-    var video = document.getElementById("hero-right")
+    var video = document.getElementById("right-side")
       var position = getVideoPosition(video);
     heroContainer.height(slideHeight + "px");
     heroBkgrdRight.css("left", position.right + "px").removeClass("hidden");
