@@ -106,7 +106,7 @@
   </div>
 </header>
 
-<div class="navbar-header">
+<div class="navbar-header navbar-color">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
       <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
       <span class="icon-bar"></span>
