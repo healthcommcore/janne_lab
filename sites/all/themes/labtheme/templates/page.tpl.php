@@ -97,7 +97,7 @@
         </div>
       <?php endif; ?>
       <?php if (!empty($page['header_right'])): ?>
-        <div class="col-md-5 col-md-push-1 col-sm-6">
+        <div class="col-lg-4 col-lg-push-2 col-md-5 col-md-push-1 col-sm-6">
           <?php print render($page['header_right']); ?>
         </div>
       <?php endif; ?>

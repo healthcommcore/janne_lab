@@ -66,6 +66,9 @@ h3 {
 
 header {
   background: $header-color;
+  .logo {
+    display: inline-block;
+  }
   .logo img {
     margin-top: 10px;
   }
