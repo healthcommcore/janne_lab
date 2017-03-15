@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  margin: 0 0 25px 0;
+  margin: 0 0 35px 0;
 }
 
 a {
@@ -36,7 +36,7 @@ h1.landing {
   border: none;
   position: absolute;
   background: rgba(255, 255, 255, 0.7);
-  margin-top: -82px;
+  margin-top: -81px;
   padding: 15px 0 10px 80px;
   width: 1140px;
 }
@@ -52,8 +52,10 @@ h2 {
   font-family: $h2-style;
   line-height: $h2-height;
   margin: $h2-margin;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
   font-variant: small-caps;
+  text-transform: lowercase;
+  font-weight: $bold-weight;
 }
 
 h3 {
@@ -293,6 +295,9 @@ header {
 
 .page-content {
   line-height: $body-height;
+  ul {
+    margin-top: -30px;
+  }
 }
 
 .research-themes-header {
@@ -628,6 +633,11 @@ footer {
     text-align: center;
     @include border(bottom, 1px, $dk-blue);
   }
+  .research-theme {
+    .research-theme-text {
+      font-size: 1.8em;
+    }
+  }
   .content-img {
     img {
       padding-left: 20px;
@@ -676,7 +686,7 @@ footer {
     margin-bottom: 40px;
     .hero-right {
       .video-statement {
-        font-size: 2.1em;
+        font-size: 2.5em;
       }
     }
   }
@@ -813,7 +823,6 @@ footer {
     }
     .research-theme-text {
       padding-left: 15px;
-      font-size: 1.8em;
     }
   }
   .content-research-themes {
