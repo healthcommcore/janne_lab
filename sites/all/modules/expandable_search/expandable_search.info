@@ -1,0 +1,4 @@
+name = Expandable Search
+description = "Hides search field and reveals it when user clicks search icon"
+package = Other
+core = 7.x

@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_init()
+ */
+function expandable_search_init () {
+  $module_path = drupal_get_path("module", "expandable_search");
+  drupal_add_css(
+    ".js #block-search-form { margin-left: -1000000px; }", 
+    "inline"
+  );
+  drupal_add_js($module_path . "/js/expandable_search.js", array("scope" => "footer") );
+  drupal_add_css($module_path . '/css/expandable_search.css');
+}
+

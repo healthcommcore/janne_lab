@@ -1,5 +1,5 @@
-//@import '../bootstrap_sass/bootstrap.scss';
-@import 'fonts.scss';
+@import '../bootstrap_sass/bootstrap.scss';
+//@import 'fonts.scss';
 @import 'variables.scss';
 
 body {
@@ -193,7 +193,7 @@ header {
 }
 
 .hero-bkgrd-left {
-  background: url('../images/hero_bkgrd_left_1.jpg') 0 0 no-repeat;
+  background: url('../images/hero_bkgrd_left_hires_1.png') 0 0 no-repeat;
   width: 645px;
   height: 458px;
   float: left;
@@ -201,7 +201,7 @@ header {
 
 .hero-bkgrd-right {
   @include border(left, 8px, $hero-bkgrd-border-color);
-  background: url('../images/hero_bkgrd_right_1.jpg') 100% 0 no-repeat;
+  background: url('../images/hero_bkgrd_right_hires_1.png') 100% 0 no-repeat;
 }
 
 .hero-bkgrd-right-dims {

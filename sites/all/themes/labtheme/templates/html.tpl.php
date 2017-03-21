@@ -65,13 +65,13 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
-  <!--[if lt IE 9]>
+  <!--[if lte IE 11]>
     <script src="https://raw.githubusercontent.com/aFarkas/html5shiv/master/dist/html5shiv.min.js"></script>
     <script src="https://raw.githubusercontent.com/scottjehl/Respond/master/dest/respond.min.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
 </head>
-  <!--[if lt IE 9]>
+  <!--[if lte IE 11]>
     <body class="<?php print $classes . ' ieclass'; ?>" <?php print $attributes;?>>
   <![endif]-->
   <!--[if !IE]>-->
