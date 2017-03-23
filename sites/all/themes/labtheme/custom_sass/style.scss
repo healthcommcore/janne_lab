@@ -36,7 +36,7 @@ h1.landing {
   border: none;
   position: absolute;
   background: rgba(255, 255, 255, 0.7);
-  margin-top: -81px;
+  margin-top: -116px;
   padding: 15px 0 10px 80px;
   width: 1140px;
 }
@@ -597,7 +597,7 @@ footer {
 
   h1.landing {
     width: 940px;
-    margin-top: -76px;
+    margin-top: -112px;
     padding-left: 50px;
   }
 
@@ -701,7 +701,7 @@ footer {
   }
   h1.landing {
     width: 720px;
-    margin-top: -66px;
+    margin-top: -101px;
     padding: 12px 0 8px 50px;
   }
   h2 {
@@ -865,10 +865,14 @@ footer {
     font-size: $h2-size-xs;
     line-height: 1.2;
   }
+  .title-header p {
+    margin: 0;
+  }
   h1.landing {
     width: 100%;
-    margin-top: -38px;
     padding: 4px 0 2px 20px;
+    margin-top: 0;
+    position: relative;
   }
   .main-container {
     font-size: $body-size-xs;
