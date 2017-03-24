@@ -33,3 +33,4 @@ regions[page_bottom]    = 'Page bottom'
 stylesheets[all][] = css/style.css
 
 scripts[] = js/bootstrap.min.js
+scripts[] = js/background_image_loader.js

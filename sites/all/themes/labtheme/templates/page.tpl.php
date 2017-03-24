@@ -134,7 +134,7 @@
 <div class="content-gradient">
   <?php if ($is_front) : ?>
     <div id="hero-container" class="hero-container absolute visible-lg">
-      <div class="hero-bkgrd-left hero-border"></div>
+      <div id="hero-bkgrd-left" class="hero-bkgrd-left hero-border"></div>
       <div id="hero-bkgrd-right" class="hero-bkgrd-right absolute hidden border-left hero-bkgrd-right-dims">
         <div class="hero-border hero-bkgrd-right-dims"></div>
       </div>
