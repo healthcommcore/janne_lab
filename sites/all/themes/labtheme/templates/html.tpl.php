@@ -70,11 +70,6 @@
     <script src="https://raw.githubusercontent.com/scottjehl/Respond/master/dest/respond.min.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
-</head>
-  <!--[if lte IE 11]>
-    <body class="<?php print $classes . ' ieclass'; ?>" <?php print $attributes;?>>
-  <![endif]-->
-  <!--[if !IE]>-->
 <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -86,6 +81,12 @@
   ga('send', 'pageview');
 
 </script>
+
+</head>
+  <!--[if lte IE 11]>
+    <body class="<?php print $classes . ' ieclass'; ?>" <?php print $attributes;?>>
+  <![endif]-->
+  <!--[if !IE]>-->
 <body<?php print $body_attributes; ?>>
   <!--<![endif]-->
 
