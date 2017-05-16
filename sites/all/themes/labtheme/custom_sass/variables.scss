@@ -53,7 +53,8 @@ $search-position: 20px 0 0 0;
 $content-area-color: $lt-blue radial-gradient(circle, #fff, $lt-blue);
 
 /* Hero */    
-$hero-container-lg: 100%;
+$hero-bkgrd-container-lg: 100%;
+$hero-container-lg: 768px;
 $hero-position: 50px 0 0 30px;
 $hero-size: 3.0em;
 $hero-color: $white;

@@ -133,14 +133,14 @@
 
 <div class="content-gradient">
   <?php if ($is_front) : ?>
-    <div id="hero-container" class="hero-container absolute visible-lg">
+    <div id="hero-bkgrd-container" class="hero-bkgrd-container absolute visible-lg">
       <div id="hero-bkgrd-left" class="hero-bkgrd-left hero-border"></div>
       <div id="hero-bkgrd-right" class="hero-bkgrd-right absolute hidden border-left hero-bkgrd-right-dims">
         <div class="hero-border hero-bkgrd-right-dims"></div>
       </div>
     </div>
     <div class="hero">
-      <div class="container">
+      <div class="hero-container">
         <div class="row">
           <?php if (!empty($page['hero_right'])): ?>
             <div class="col-md-4 col-md-push-8 col-sm-4 col-sm-push-8">
@@ -160,10 +160,10 @@
       </div>
     </div>
     <?php if (!empty($page['home_research_theme'])): ?>
-      <div class="container">
+      <div class="hero-container">
         <h1 class="research-themes-header">Main research themes</h1>
       </div>
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="home-research-themes">
             <?php print render($page['home_research_theme']); ?>
@@ -252,7 +252,7 @@
   <script>
   var $ = jQuery;
   $(window).load(function() {
-    var heroContainer = $("#hero-container");
+    var heroContainer = $("#hero-bkgrd-container");
     var slideHeight = $("#left-side")[0].scrollHeight;
     var heroBkgrdRight = $("#hero-bkgrd-right");
     var video = document.getElementById("right-side")

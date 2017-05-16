@@ -182,10 +182,15 @@ header {
   font-weight: $med-weight;
 }
 
-.hero-container {
-  width: $hero-container-lg;
+.hero-bkgrd-container {
+  width: $hero-bkgrd-container-lg;
   z-index: 0;
   overflow: hidden;
+}
+
+.hero-container {
+  width: $hero-container-lg;
+  margin: 0 auto;
 }
 
 .hero-border {
@@ -214,7 +219,7 @@ header {
 .hero {
   position: relative;
   width: auto;
-  margin-bottom: 80px;
+  margin-bottom: 55px;
   .hero-left {
     @include border(left, 8px, $hero-bkgrd-border-color);
     @include border(right, 8px, $hero-bkgrd-border-color);
@@ -225,11 +230,11 @@ header {
     }
     .video-statement {
       color: $burgundy;
-      font-size: 3.4em;
+      font-size: 2.4em;
       font-weight: $lt-weight;
       @include border(left, 2px, $burgundy);
-      margin: 40px 0 0 20px;
-      padding: 5px 10px 25px 25px ;
+      margin: 30px 0 0 15px;
+      padding: 5px 15px 15px 15px ;
       line-height: 1.2;
       letter-spacing: -0.04em;
     }
@@ -302,22 +307,22 @@ header {
 
 .research-themes-header {
   margin-bottom: 0;
-  font-size: 3.5em;
+  font-size: 2.8em;
   border-bottom: none;
 }
 
 .home-research-themes {
-  width: 90%;
   margin: 0 auto;
   @include border(bottom, 1px, $dk-blue);
 }
 
 .research-theme {
   display: block;
-  margin: 50px 0 20px 0;
+  margin: 30px 0 20px 0;
   .research-theme-img {
-    float: left;
-    margin-right: 20px;
+    padding-right: 15px;
+    display: table-cell;
+    vertical-align: middle;
   }
   .research-theme-text {
     display: table-cell;
@@ -553,15 +558,15 @@ footer {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 2200px) {
+@media (min-width: 1200px) {
   .research-theme {
     .research-theme-img {
-      width: 107px;
+      width: 93px;
     }
     .research-theme-text {
-      font-size: 1.7em;
+      font-size: 1.3em;
       height: 120px;
-      padding-right: 30px;
+      padding-right: 0;
     }
   }
 }
