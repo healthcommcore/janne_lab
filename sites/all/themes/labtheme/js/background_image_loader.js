@@ -26,7 +26,7 @@
 
   // Build the end of the image path using the random number and direction
     function getNewImage(num, direction) {
-      return [direction, "_", num, ".png"].join("");
+      return [direction, "_new_", num, ".jpg"].join("");
     }
 
   });

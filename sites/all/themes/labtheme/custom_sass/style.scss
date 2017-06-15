@@ -198,20 +198,20 @@ header {
 }
 
 .hero-bkgrd-left {
-  background: url('../images/hero_bkgrd_hires_left_1.png') 0 0 no-repeat;
-  width: 645px;
-  height: 458px;
+  background: url('../images/hero_bkgrd_hires_left_new_1.jpg') 0 0 no-repeat;
+  width: 500px;
+  height: 303px;
   float: left;
 }
 
 .hero-bkgrd-right {
   @include border(left, 8px, $hero-bkgrd-border-color);
-  background: url('../images/hero_bkgrd_hires_right_1.png') 100% 0 no-repeat;
+  background: url('../images/hero_bkgrd_hires_right_new_1.jpg') 100% 0 no-repeat;
 }
 
 .hero-bkgrd-right-dims {
-  width: 643px;
-  height: 355px;
+  width: 500px;
+  height: 232px;
 }
 /*
 */
